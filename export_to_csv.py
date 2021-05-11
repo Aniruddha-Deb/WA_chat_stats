@@ -12,7 +12,7 @@ ctr = 0;
 with open(sys.argv[1], "r") as chat:
 	out = open(sys.argv[2], 'w', newline='')
 	outwriter = csv.writer(out)
-	outwriter.write("date,time,sender,text")
+	outwriter.writerow(["date","time","sender","text"])
 	line = chat.readline()
 	while line:
 		data = regex.match(line)

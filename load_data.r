@@ -1,4 +1,6 @@
-text_stats = read.csv("data/cult_stats_final.csv");
+library('tidyverse')
+# how to pass parameters to R scripts I wonder :/
+text_stats = read.csv("data/<input csv>.csv");
 
 text_stats$time = as.POSIXct(text_stats$time, format="%I:%M:%S %p");
 text_stats$date <- as.Date(text_stats$date, format="%d/%m/%y");
